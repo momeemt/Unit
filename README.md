@@ -8,7 +8,7 @@ It reduces the burden on the developer by expressing "units" as types instead of
 For example,
 
 ```nim
-import Unit
+include Unit
 
 const
   my_height = 1.72.m
