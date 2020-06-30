@@ -2,7 +2,7 @@
 
 version       = "0.1.0"
 author        = "Momeemt"
-description   = "A new awesome nimble package"
+description   = "A library that provides unit types in nim"
 license       = "MIT"
 srcDir        = "src"
 
