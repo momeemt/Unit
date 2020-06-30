@@ -44,3 +44,11 @@ type
   cdl* = distinct float
     ## The type cdl represents the luminous intensity in the International System of Units (SI) in candelas.
     ## [Notice!!] Since the Nim standard library provides cd procedures, the type name is set to cdl.
+
+  cm2* = distinct float
+    ## The cm2 type represents the square centimeter.
+
+## Private Type (beta)
+type
+  cm3 = distinct float
+  cm4 = distinct float

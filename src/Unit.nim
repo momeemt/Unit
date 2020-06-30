@@ -14,3 +14,4 @@ import Unit/KiloAmpere
 import Unit/Kelvin
 import Unit/Mole
 import Unit/Candela
+import Unit/SquareCentiMetre
