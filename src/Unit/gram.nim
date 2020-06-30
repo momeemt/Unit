@@ -20,7 +20,11 @@ proc `/=`* (value1: var g, value2: g) {.borrow.}
 
 proc `==`* (value1, value2: g): bool {.borrow.}
 
-proc `$`* (value: g): string {.borrow.}
+proc `$`* (value: g): string =
+  return value.repr & "[g]"
+
+proc toGram* (value: int): g =
+  return value.g
 
 proc toGram* (value: kg): g =
   return value.g * 1000.g

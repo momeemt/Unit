@@ -20,7 +20,11 @@ proc `/=`* (value1: var mg, value2: mg) {.borrow.}
 
 proc `==`* (value1, value2: mg): bool {.borrow.}
 
-proc `$`* (value: mg): string {.borrow.}
+proc `$`* (value: mg): string =
+  return value.repr & "[mg]"
+
+proc toMilliGram* (value: int): mg =
+  return value.mg
 
 proc toMilliGram* (value: g): mg =
   return value.mg * 1e3.mg
