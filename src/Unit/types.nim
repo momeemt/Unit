@@ -41,6 +41,6 @@ type
   mol* = distinct float
     ## The type mol represents the amount of substance in the International System of Units (SI) in moles.
 
-  cdr* = distinct float
-    ## The type cdr represents the luminous intensity in the International System of Units (SI) in candelas.
-    ## [Notice!!] Since the Nim standard library provides cd procedures, the type name is set to cdr.
+  cdl* = distinct float
+    ## The type cdl represents the luminous intensity in the International System of Units (SI) in candelas.
+    ## [Notice!!] Since the Nim standard library provides cd procedures, the type name is set to cdl.

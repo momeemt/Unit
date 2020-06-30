@@ -17,7 +17,7 @@ const
   electric_current = 20.A
   today_temperature = 302.15.K     # I live in Tokyo ;)
   glass_of_water = 6e24.mol
-  super_led = 15.cdr
+  super_led = 15.cdl
 
 echo $my_height
 # => 1.72[m]
@@ -42,9 +42,9 @@ echo my_height.toCentiMetre.repr
 - electric current (A, mA, kA)
 - temperature (K)
 - amount of substance (mol)
-- luminous intensity (cdr)
+- luminous intensity (cdl)
   
-[Notice!!] Since the Nim standard library provides cd procedures, the type name is set to cdr.
+[Notice!!] Since the Nim standard library provides cd procedures, the type name is set to cdl.
 
 ## Developer
 Momeemt  
