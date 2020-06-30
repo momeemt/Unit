@@ -1,4 +1,6 @@
-# Unit - A library that provides unit types
+# Unit - A library that provides unit types  
+
+![](https://travis-ci.org/nim-lang/packages.svg?branch=master)
 
 Unit is a library that provides unit types in Nim.  
 It reduces the burden on the developer by expressing "units" as types instead of expressing them in the head and in writing.
