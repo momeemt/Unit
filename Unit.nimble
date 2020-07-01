@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.1.1"
+version       = "0.1.2"
 author        = "Momeemt"
 description   = "A library that provides unit types in nim"
 license       = "MIT"
