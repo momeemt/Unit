@@ -1,7 +1,7 @@
 import std/[strformat, strutils, sugar, math]
 
 type
-  UnitDimension* = object
+  UnitDimension = object
     second: int
     metre: int
     kilogram: int
@@ -13,7 +13,7 @@ type
   Unit* [UD: static UnitDimension, T: SomeNumber] = object
     value*: T
 
-iterator pairs* (unit: UnitDimension): tuple[key: string, dimension: int] =
+iterator pairs (unit: UnitDimension): tuple[key: string, dimension: int] =
   var result = @[
     ("s", unit.second),
     ("m", unit.metre),
@@ -56,7 +56,7 @@ proc ud* (s=0, m=0, kg=0, A=0, K=0, mol=0, cd=0): UnitDimension =
     candela: cd
   )
 
-proc map* (left, right: UnitDimension, fn: proc (left, right: int): int): UnitDimension =
+proc map (left, right: UnitDimension, fn: proc (left, right: int): int): UnitDimension =
   result = ud(
     fn(left.second, right.second),
     fn(left.metre, right.metre),
@@ -67,10 +67,10 @@ proc map* (left, right: UnitDimension, fn: proc (left, right: int): int): UnitDi
     fn(left.candela, right.candela)
   )
 
-proc `+`* (left, right: UnitDimension): UnitDimension =
+proc `+` (left, right: UnitDimension): UnitDimension =
   map(left, right, (left, right) => left + right)
 
-proc `-`* (left, right: UnitDimension): UnitDimension =
+proc `-` (left, right: UnitDimension): UnitDimension =
   map(left, right, (left, right) => left - right)
 
 proc `+`* [UD: static UnitDimension, T: SomeNumber] (left, right: Unit[UD, T]): Unit[UD, T] =
