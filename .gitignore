@@ -1,7 +1,2 @@
-
-tools/generate_type
-
-tools/generate_type.nim
-
-experiment/
-tests/test_experiment
+/tests/*
+!/tests/*.*
