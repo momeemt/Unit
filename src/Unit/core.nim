@@ -1,4 +1,4 @@
-import std/[strformat, strutils, sugar]
+import std/[strformat, strutils, sugar, math]
 
 type
   UnitDimension* = object
@@ -11,7 +11,7 @@ type
     candela: int
 
   Unit* [UD: static UnitDimension, T: SomeNumber] = object
-    value: T
+    value*: T
 
 iterator pairs* (unit: UnitDimension): tuple[key: string, dimension: int] =
   var result = @[
@@ -74,30 +74,33 @@ proc `-`* (left, right: UnitDimension): UnitDimension =
   map(left, right, (left, right) => left - right)
 
 proc `+`* [UD: static UnitDimension, T: SomeNumber] (left, right: Unit[UD, T]): Unit[UD, T] =
-  result = Unit[UD, T](left.value + right.value)
+  result = Unit[UD, T](value: left.value + right.value)
 
 proc `-`* [UD: static UnitDimension, T: SomeNumber] (left, right: Unit[UD, T]): Unit[UD, T] =
-  result = Unit[UD, T](left.value - right.value)
+  result = Unit[UD, T](value: left.value - right.value)
 
 proc `*`* [UD: static UnitDimension, T: SomeNumber] (left: Unit[UD, T], right: T): Unit[UD, T] =
-  result = Unit[UD, T](left.value * right)
+  result = Unit[UD, T](value: left.value * right)
 
 proc `/`* [UD: static UnitDimension, T: SomeNumber] (left: Unit[UD, T], right: T): Unit[UD, T] =
-  result = Unit[UD, T](left.value / right)
+  result = Unit[UD, T](value: left.value / right)
 
-proc `==`* [UD: static UnitDimension, T: SomeNumber] (left: Unit[UD, T], right: T): Unit[UD, T] =
+proc `==`* [UD: static UnitDimension, T: SomeNumber] (left, right: Unit[UD, T]): bool =
   result = left.value == right.value
 
-proc `>`* [UD: static UnitDimension, T: SomeNumber] (left: Unit[UD, T], right: T): Unit[UD, T] =
+proc `~=`* [UD: static UnitDimension, T: SomeFloat]  (left, right: Unit[UD, T]): bool =
+  result = almostEqual(left.value, right.value)
+
+proc `>`* [UD: static UnitDimension, T: SomeNumber]  (left, right: Unit[UD, T]): bool =
   result = left.value > right.value
 
-proc `>=`* [UD: static UnitDimension, T: SomeNumber] (left: Unit[UD, T], right: T): Unit[UD, T] =
+proc `>=`* [UD: static UnitDimension, T: SomeNumber]  (left, right: Unit[UD, T]): bool =
   result = left.value >= right.value
 
-proc `<`* [UD: static UnitDimension, T: SomeNumber] (left: Unit[UD, T], right: T): Unit[UD, T] =
+proc `<`* [UD: static UnitDimension, T: SomeNumber]  (left, right: Unit[UD, T]): bool =
   result = left.value < right.value
 
-proc `<=`* [UD: static UnitDimension, T: SomeNumber] (left: Unit[UD, T], right: T): Unit[UD, T] =
+proc `<=`* [UD: static UnitDimension, T: SomeNumber]  (left, right: Unit[UD, T]): bool =
   result = left.value <= right.value
 
 proc `*`* [UD1, UD2: static UnitDimension, T: SomeNumber] (left: Unit[UD1, T], right: Unit[UD2, T]): Unit[UD1+UD2, T] =
