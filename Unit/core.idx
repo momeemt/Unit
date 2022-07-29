@@ -1,0 +1,17 @@
+Unit	Unit/core.html#Unit	core: Unit	
+`$`	Unit/core.html#$,UnitDimension	core: `$`(unitDimension: UnitDimension): string	
+`$`	Unit/core.html#$,Unit[UD,T: SomeNumber]	core: `$`[UD: static UnitDimension; T: SomeNumber](unit: Unit[UD, T]): string	
+ud	Unit/core.html#ud,int,int,int,int,int,int,int	core: ud(s = 0; m = 0; kg = 0; A = 0; K = 0; mol = 0; cd = 0): UnitDimension	
+`+`	Unit/core.html#+,Unit[UD,T: SomeNumber],Unit[UD,T: SomeNumber]	core: `+`[UD: static UnitDimension; T: SomeNumber](left, right: Unit[UD, T]): Unit[UD,\n    T]	
+`-`	Unit/core.html#-,Unit[UD,T: SomeNumber],Unit[UD,T: SomeNumber]	core: `-`[UD: static UnitDimension; T: SomeNumber](left, right: Unit[UD, T]): Unit[UD,\n    T]	
+`*`	Unit/core.html#*,Unit[UD,T: SomeNumber],T	core: `*`[UD: static UnitDimension; T: SomeNumber](left: Unit[UD, T]; right: T): Unit[\n    UD, T]	
+`/`	Unit/core.html#/,Unit[UD,T: SomeNumber],T	core: `/`[UD: static UnitDimension; T: SomeNumber](left: Unit[UD, T]; right: T): Unit[\n    UD, T]	
+`==`	Unit/core.html#==,Unit[UD,T: SomeNumber],Unit[UD,T: SomeNumber]	core: `==`[UD: static UnitDimension; T: SomeNumber](left, right: Unit[UD, T]): bool	
+`~=`	Unit/core.html#~=,Unit[UD,T: SomeFloat],Unit[UD,T: SomeFloat]	core: `~=`[UD: static UnitDimension; T: SomeFloat](left, right: Unit[UD, T]): bool	
+`&gt;`	Unit/core.html#>,Unit[UD,T: SomeNumber],Unit[UD,T: SomeNumber]	core: `&gt;`[UD: static UnitDimension; T: SomeNumber](left, right: Unit[UD, T]): bool	
+`&gt;=`	Unit/core.html#>=,Unit[UD,T: SomeNumber],Unit[UD,T: SomeNumber]	core: `&gt;=`[UD: static UnitDimension; T: SomeNumber](left, right: Unit[UD, T]): bool	
+`&lt;`	Unit/core.html#<,Unit[UD,T: SomeNumber],Unit[UD,T: SomeNumber]	core: `&lt;`[UD: static UnitDimension; T: SomeNumber](left, right: Unit[UD, T]): bool	
+`&lt;=`	Unit/core.html#<=,Unit[UD,T: SomeNumber],Unit[UD,T: SomeNumber]	core: `&lt;=`[UD: static UnitDimension; T: SomeNumber](left, right: Unit[UD, T]): bool	
+`*`	Unit/core.html#*,Unit[UD1,T: SomeNumber],Unit[UD2,T: SomeNumber]	core: `*`[UD1, UD2: static UnitDimension; T: SomeNumber](left: Unit[UD1, T];\n    right: Unit[UD2, T]): Unit[UD1 + UD2, T]	
+`div`	Unit/core.html#div,Unit[UD1,T: SomeInteger],Unit[UD2,T: SomeInteger]	core: `div`[UD1, UD2: static UnitDimension; T: SomeInteger](left: Unit[UD1, T];\n    right: Unit[UD2, T]): Unit[UD1 - UD2, T]	
+`/`	Unit/core.html#/,Unit[UD1,T: SomeFloat],Unit[UD2,T: SomeFloat]	core: `/`[UD1, UD2: static UnitDimension; T: SomeFloat](left: Unit[UD1, T];\n    right: Unit[UD2, T]): Unit[UD1 - UD2, T]	

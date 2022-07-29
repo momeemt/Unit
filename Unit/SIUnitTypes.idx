@@ -1,0 +1,12 @@
+kg	Unit/SIUnitTypes.html#kg,T	SIUnitTypes: kg[T: SomeNumber](value: T): Unit[ud(0, 0, 1, 0, 0, 0, 0), T]	
+kg	Unit/SIUnitTypes.html#kg.t,T,int	SIUnitTypes: kg[T: SomeNumber](v: T; dimension: int): untyped	
+s	Unit/SIUnitTypes.html#s,T	SIUnitTypes: s[T: SomeNumber](value: T): Unit[ud(1, 0, 0, 0, 0, 0, 0), T]	
+s	Unit/SIUnitTypes.html#s.t,T,int	SIUnitTypes: s[T: SomeNumber](v: T; dimension: int): untyped	
+A	Unit/SIUnitTypes.html#A,T	SIUnitTypes: A[T: SomeNumber](value: T): Unit[ud(0, 0, 0, 1, 0, 0, 0), T]	
+A	Unit/SIUnitTypes.html#A.t,T,int	SIUnitTypes: A[T: SomeNumber](v: T; dimension: int): untyped	
+K	Unit/SIUnitTypes.html#K,T	SIUnitTypes: K[T: SomeNumber](value: T): Unit[ud(0, 0, 0, 0, 1, 0, 0), T]	
+K	Unit/SIUnitTypes.html#K.t,T,int	SIUnitTypes: K[T: SomeNumber](v: T; dimension: int): untyped	
+mol	Unit/SIUnitTypes.html#mol,T	SIUnitTypes: mol[T: SomeNumber](value: T): Unit[ud(0, 0, 0, 0, 0, 1, 0), T]	
+mol	Unit/SIUnitTypes.html#mol.t,T,int	SIUnitTypes: mol[T: SomeNumber](v: T; dimension: int): untyped	
+cd	Unit/SIUnitTypes.html#cd,T	SIUnitTypes: cd[T: SomeNumber](value: T): Unit[ud(0, 0, 0, 0, 0, 0, 1), T]	
+cd	Unit/SIUnitTypes.html#cd.t,T,int	SIUnitTypes: cd[T: SomeNumber](v: T; dimension: int): untyped	
